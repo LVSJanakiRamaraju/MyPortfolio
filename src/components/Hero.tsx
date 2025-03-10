@@ -1,9 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Github, Linkedin, Youtube, Code2 } from 'lucide-react';
 
+const roles = [
+  'Full Stack Developer',
+  'Problem Solver',
+  'Tech Enthusiast',
+];
 
 const Hero = () => {
+  const [currentRole, setCurrentRole] = useState('');
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
 
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    
+    if (isTyping) {
+      const role = roles[roleIndex];
+      if (currentRole.length < role.length) {
+        timeout = setTimeout(() => {
+          setCurrentRole(role.slice(0, currentRole.length + 1));
+        }, 100);
+      } else {
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 2000);
+      }
+    } else {
+      if (currentRole.length > 0) {
+        timeout = setTimeout(() => {
+          setCurrentRole(currentRole.slice(0, currentRole.length - 1));
+        }, 50);
+      } else {
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+        setIsTyping(true);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [currentRole, isTyping, roleIndex]);
 
   return (
     <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -13,7 +48,8 @@ const Hero = () => {
             <h1 className="text-4xl lg:text-5xl font-bold mb-5 dark:text-white">
               I'm <span className="text-indigo-600 dark:text-indigo-400">L V S JANAKI RAMA RAJU </span>
               <br />
-              <span className="inline-block min-h-[1.2em]">Full Stack Developer</span>
+              <span className="inline-block min-h-[1.2em]">{currentRole}</span>
+              <span className="animate-blink">|</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               I am a Web-Applications Developer, focused on developing scalable web applications with modern tech and strong foundation in Data Structures and Algorithms, now exploring AI/ML to build intelligent, data-driven solutions.
