@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Moon, Sun } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, FileDown} from 'lucide-react';
 import { useState } from 'react';
 
 // Components
@@ -32,6 +32,13 @@ function App() {
                 <a href="#skills" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Skills</a>
                 <a href="#projects" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Projects</a>
                 <a href="#contact" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Contact</a>
+                <a
+                  href="/Portfolio_Resume.pdf"
+                  download="LVS_Janaki_Rama_Raju_Resume.pdf"
+                  className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                  <FileDown className="w-4 h-4" />
+                  Resume
+                </a>
                 <button
                   onClick={toggleDarkMode}
                   className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
