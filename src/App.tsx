@@ -36,7 +36,7 @@ function App() {
             {/* Main Navigation Bar */}
             <div className="flex items-center justify-between h-16">
               <a href="#" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                LVS
+                <img src="/public/lvs.png" alt="LVS" className="w-12 h-12 rounded-3xl w-full shadow-2xl p-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600" />
               </a>
 
               {/* Desktop Navigation */}
