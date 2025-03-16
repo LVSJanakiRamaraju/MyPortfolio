@@ -13,7 +13,7 @@ const Hero = () => {
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
     
     if (isTyping) {
       const role = roles[roleIndex];
