@@ -4,7 +4,7 @@ const skills = {
   'Languages': ['Python', 'JavaScript', 'Java', 'C++', 'PHP'],
   'Web Technologies': ['Tailwind CSS', 'React.js', 'Node.js', 'Express.js', 'TypeScript', 'REST APIs'],
   'Machine Learning': ['TensorFlow', 'Scikit-learn', 'NLP', 'Data Manipulation & Analysis', 'ML Algorithms', 'OpenCV'],
-  'Databases': ['SQL' , 'Sqlite'],
+  'Databases': ['SQL' , 'Sqlite', 'MongoDB'],
   'Tools': ['Git', 'Linux', 'VS Code', 'Jupyter', 'Google Colab', 'Figma'],
 };
 
