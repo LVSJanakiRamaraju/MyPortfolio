@@ -137,7 +137,6 @@ function App() {
           <About />
           <Skills />
           <Projects />
-          <Experience />
           <Contact />
         </main>
 
