@@ -1,41 +1,45 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Mail, Github, Linkedin, Youtube } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!form.current) return;
-
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
-    try {
-      const result = await emailjs.sendForm(
-        'service_94bozvk',
-        'template_urwghbb', 
-        form.current,
-        '-i3RydOwiJzB8Todj'
-      );
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-      if (result.text === 'OK') {
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
         setSubmitStatus({
           type: 'success',
-          message: 'Message received successfully! I will get back to you soon.',
+          message: 'Message sent successfully! I will get back to you soon.',
         });
-        form.current.reset();
+        form.reset();
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: 'Failed to send message. Please try again later.',
+        });
       }
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.',
+        message: 'Something went wrong. Please try again.',
       });
     } finally {
       setIsSubmitting(false);
@@ -50,69 +54,57 @@ const Contact = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-6 dark:text-white">Let's Connect</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              If you have a project in mind? Looking for a Developer to bring your ideas to life? Feel free to reach out <br/> I'd love to collaborate!
+              Have a project in mind? Want to collaborate? Feel free to reach out.
             </p>
             <div className="space-y-4">
-              <a
-                href="mailto:rajakanumuri2005@gmail.com"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
+              <a href="mailto:rajakanumuri2005@gmail.com" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
                 <Mail className="w-5 h-5" />
                 rajakanumuri2005@gmail.com
               </a>
-              <a
-                href="https://github.com/LVSJanakiRamaraju"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
+              <a href="https://github.com/LVSJanakiRamaraju" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
                 <Github className="w-5 h-5" />
                 GitHub Profile
               </a>
-              <a
-                href="https://www.linkedin.com/in/lvsjanakiramarajukanumuri"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
+              <a href="https://www.linkedin.com/in/lvsjanakiramarajukanumuri" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
                 <Linkedin className="w-5 h-5" />
                 LinkedIn Profile
               </a>
-              <a
-                href="https://www.youtube.com/@LVS_Logics"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
-              >
+              <a href="https://www.youtube.com/@LVS_Logics" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
                 <Youtube className="w-6 h-6" />
                 YouTube
               </a>
             </div>
           </div>
+
           <div>
-            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Add your Web3Forms Access Key below */}
+              <input type="hidden" name="access_key" value="53649f62-67c4-46e7-9161-e32dc138c2ad"/>
+              <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+              <input type="hidden" name="subject" value="New message from portfolio contact form" />
+
               <div>
-                <label htmlFor="from_name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  id="from_name"
-                  name="from_name"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+                  id="name"
+                  name="name"
                   required
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
                 />
               </div>
               <div>
-                <label htmlFor="reply_to" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  id="reply_to"
-                  name="reply_to"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+                  id="email"
+                  name="email"
                   required
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
                 />
               </div>
               <div>
@@ -123,10 +115,11 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
                   required
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
                 ></textarea>
               </div>
+
               {submitStatus.type && (
                 <div
                   className={`p-4 rounded-lg ${
@@ -138,6 +131,7 @@ const Contact = () => {
                   {submitStatus.message}
                 </div>
               )}
+
               <button
                 type="submit"
                 disabled={isSubmitting}
