@@ -4,7 +4,6 @@ import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, FileDown, Menu, X } fr
 // Components
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
@@ -42,7 +41,6 @@ function App() {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center gap-6">
                 <a href="#about" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">About</a>
-                <a href="#skills" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Skills</a>
                 <a href="#projects" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Projects</a>
                 <a href="#contact" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Contact</a>
                 <a
@@ -97,13 +95,6 @@ function App() {
                   About
                 </a>
                 <a
-                  href="#skills"
-                  onClick={closeMenu}
-                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
-                >
-                  Skills
-                </a>
-                <a
                   href="#projects"
                   onClick={closeMenu}
                   className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
@@ -135,7 +126,6 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Skills />
           <Projects />
           <Contact />
         </main>
