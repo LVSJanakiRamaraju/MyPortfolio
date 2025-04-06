@@ -31,6 +31,14 @@ const projects = {
   ],
   'Machine Learning': [
     {
+      title: 'Book Recommender System',
+      description: 'A collaborative filtering-based web app that recommends similar books and showcases the top 50 popular ones. Built using Streamlit, it utilizes user ratings and cosine similarity to personalize recommendations.',
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1743958533/Screenshot_2025-04-06_222054_m4iemp.png',
+      tech: ['Python', 'Streamlit', 'Pandas', 'Cosine Similarity'],
+      github: 'https://huggingface.co/spaces/RamaRaju18/Personalized-Book-Recommender/tree/main',
+      demo: 'https://huggingface.co/spaces/RamaRaju18/Personalized-Book-Recommender',
+    },
+    {
       title: 'Twitter Trending Topics Predictor',
       description: 'This is a machine learning-powered web application that predicts trending topics on Twitter based on country and context selection. Built using Streamlit, it leverages machine learning techniques to analyze and forecast popular discussions across different regions.',
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1742124632/Screenshot_2025-03-16_165947_imtt0z.png',
