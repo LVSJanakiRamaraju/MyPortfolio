@@ -41,6 +41,7 @@ function App() {
               {/* Desktop Navigation */}
               <div className="hidden md:flex items-center gap-6">
                 <a href="#about" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">About</a>
+                <a href="#experience" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Experience</a>
                 <a href="#projects" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Projects</a>
                 <a href="#contact" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Contact</a>
                 <a
@@ -95,6 +96,13 @@ function App() {
                   About
                 </a>
                 <a
+                  href="#experience"
+                  onClick={closeMenu}
+                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
+                >
+                  Experience
+                </a>
+                <a
                   href="#projects"
                   onClick={closeMenu}
                   className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
@@ -126,6 +134,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Experience />
           <Projects />
           <Contact />
         </main>
