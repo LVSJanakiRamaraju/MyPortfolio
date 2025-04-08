@@ -66,7 +66,7 @@ const Hero = () => {
                 href="#contact"
                 className="px-6 py-3 border-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 dark:border-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-800 transition"
               >
-                Hire Me
+                Contact Me
               </a>
             </div>
             <div className="flex gap-6">
