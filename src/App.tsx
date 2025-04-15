@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Moon, Sun, FileDown, Menu, X } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Moon,
+  Sun,
+  FileDown,
+  Menu,
+  X
+} from 'lucide-react';
 
 // Components
 import Hero from './components/Hero';
@@ -27,17 +37,28 @@ function App() {
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark');
+    setDarkMode(prev => !prev);
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prev => !prev);
   };
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
+
+  // Tawk.to Live Chat Script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://embed.tawk.to/67fe5efb08fe3f190bc23a3e/1iosq623j';
+    script.async = true;
+    script.charset = 'UTF-8';
+    script.setAttribute('crossorigin', '*');
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
@@ -45,10 +66,13 @@ function App() {
         {/* Navigation */}
         <nav className="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50">
           <div className="container mx-auto px-4">
-            {/* Main Navigation Bar */}
             <div className="flex items-center justify-between h-16">
               <a href="#" className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                <img src="https://res.cloudinary.com/drlfc6gsb/image/upload/v1742109320/Screenshot_2024-09-08_194245_wydyfu.png" alt="LVS" className="w-12 h-12 rounded-3xl w-full shadow-2xl p-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600" />
+                <img
+                  src="https://res.cloudinary.com/drlfc6gsb/image/upload/v1742109320/Screenshot_2024-09-08_194245_wydyfu.png"
+                  alt="LVS Logo"
+                  className="w-12 h-12 rounded-3xl shadow-2xl p-1 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600"
+                />
               </a>
 
               {/* Desktop Navigation */}
@@ -73,7 +97,7 @@ function App() {
                 </button>
               </div>
 
-              {/* Mobile Navigation Controls */}
+              {/* Mobile Controls */}
               <div className="flex items-center gap-4 md:hidden">
                 <button
                   onClick={toggleDarkMode}
@@ -101,34 +125,10 @@ function App() {
               }`}
             >
               <div className="py-4 space-y-4">
-                <a
-                  href="#about"
-                  onClick={closeMenu}
-                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
-                >
-                  About
-                </a>
-                <a
-                  href="#experience"
-                  onClick={closeMenu}
-                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
-                >
-                  Experience
-                </a>
-                <a
-                  href="#projects"
-                  onClick={closeMenu}
-                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#contact"
-                  onClick={closeMenu}
-                  className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400"
-                >
-                  Contact
-                </a>
+                <a href="#about" onClick={closeMenu} className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">About</a>
+                <a href="#experience" onClick={closeMenu} className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Experience</a>
+                <a href="#projects" onClick={closeMenu} className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Projects</a>
+                <a href="#contact" onClick={closeMenu} className="block py-2 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Contact</a>
                 <a
                   href="/Portfolio_Resume.pdf"
                   download="LVS_Janaki_Rama_Raju_Resume.pdf"
