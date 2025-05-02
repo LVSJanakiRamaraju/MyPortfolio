@@ -44,7 +44,7 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 -translate-y-2">
             <h1 className="text-4xl lg:text-5xl font-bold mb-5 dark:text-white">
               I'm <span className="text-indigo-600 dark:text-indigo-400">L V S JANAKI RAMA RAJU </span>
               <br />
@@ -104,7 +104,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 -translate-y-2">
             <img
               src="https://camo.githubusercontent.com/2de6ac0c6b16f59641bf9b120afab2d3e7fb1af52487d212521e3d3ae6b7eee1/68747470733a2f2f696d672e6672656570696b2e636f6d2f7072656d69756d2d766563746f722f696c6c757374726174696f6e2d7765622d646576656c6f706d656e742d70726f6772616d6d65722d636f64696e672d776562736974655f3734363635352d323831372e6a7067"
               alt="Programming"

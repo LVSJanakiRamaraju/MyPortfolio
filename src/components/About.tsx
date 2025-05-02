@@ -10,11 +10,11 @@ const About = () => {
             <img
               src="https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1741415729/WhatsApp_Image_2025-03-08_at_11.53.34_AM_e6zdom.jpg"
               alt="Profile"
-              className="rounded-lg w-full shadow-xl"
+              className="rounded-lg w-full shadow-xl -translate-y-2"
             />
           </div>
           <div className="md:w-2/3">
-            <div className="prose prose-lg dark:prose-invert">
+            <div className="prose prose-lg dark:prose-invert -translate-y-2">
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
                 I specialize in building scalable web applications using modern technologies. My journey in tech started at Anil Neerukonda Institute of Technology and Sciences(ANITS).
               </p>
