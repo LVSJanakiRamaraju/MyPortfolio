@@ -4,8 +4,17 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = {
   'Full Stack': [
     {
+      title: 'Agrofix - Bulk Fruit & Vegetable Order Platform',
+      description: "Agrofix is a full-stack web application that enables users to place bulk orders for vegetables and fruits, track order status, and allows admins to manage inventory and order data. Built using Next.js, PostgreSQL, and Tailwind CSS, with separate authentication for users and admins.",
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1746162082/Screenshot_2025-05-02_102504_mlqqnj.png',
+      tech: ['React', 'Tailwind CSS', 'PostgreSQL', 'Node.js', 'Express.js'],
+      github: 'https://github.com/LVSJanakiRamaraju/AgroFix',
+      demo: 'https://agro-fix-one.vercel.app/',
+    },
+    
+    {
       title: 'New Year 2025',
-      description: "This project is an animated New Year greeting featuring colorful text animations, balloons, and fireworks using HTML, CSS, and JavaScript..",
+      description: "This project is an animated New Year greeting featuring colorful text animations, balloons, and fireworks using HTML, CSS, and JavaScript.",
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1742122314/Screenshot_2025-03-16_161226_axex4m.png',
       tech: ['HTML', 'CSS (Keyframe Animations, Transitions)', 'JavaScript'],
       github: 'https://github.com/LVSJanakiRamaraju/NewYear2025',
@@ -13,7 +22,7 @@ const projects = {
     },
     {
       title: 'To Do Application',
-      description: 'A simple, interactive, and responsive To-Do List Application built using HTML, CSS, and JavaScript. This app helps users efficiently manage their daily, weekly, and monthly tasks with an intuitive UI and local storage support.',
+      description: 'An interactive and responsive To-Do List Application built using HTML, CSS, and JavaScript. This app helps users efficiently manage their daily, weekly, and monthly tasks with an intuitive UI and local storage support.',
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1742105372/Screenshot_2025-03-16_113633_acv5kl.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'Boxicons', 'SweetAlert'],
       github: 'https://github.com/LVSJanakiRamaraju/ToDo_Application',
