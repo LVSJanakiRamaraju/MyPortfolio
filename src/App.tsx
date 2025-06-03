@@ -82,8 +82,8 @@ function App() {
                 <a href="#projects" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Projects</a>
                 <a href="#contact" className="hover:text-indigo-600 dark:text-white dark:hover:text-indigo-400">Contact</a>
                 <a
-                  href="/Portfolio_Resume.pdf"
-                  download="LVS_Janaki_Rama_Raju_Resume.pdf"
+                  href="/Kanumuri_L_V_S_Janaki_Rama_Raju_Resume_FullStack_Developer.pdf"
+                  download="Kanumuri_L_V_S_Janaki_Rama_Raju_Resume_FullStack_Developer.pdf"
                   className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >
                   <FileDown className="w-4 h-4" />
