@@ -7,6 +7,10 @@
   50% { opacity: 0; }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .animate-blink {
   animation: blink 1s infinite;
 }
