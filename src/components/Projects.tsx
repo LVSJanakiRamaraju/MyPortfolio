@@ -4,12 +4,12 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = {
   'Full Stack': [
     {
-      title: 'Agrofix - Bulk Fruit & Vegetable Order Platform',
-      description: "Agrofix is a full-stack web application that enables users to place bulk orders for vegetables and fruits, track order status, and allows admins to manage inventory and order data. Built using Next.js, PostgreSQL, and Tailwind CSS, with separate authentication for users and admins.",
-      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1746162082/Screenshot_2025-05-02_102504_mlqqnj.png',
-      tech: ['React', 'Tailwind CSS', 'PostgreSQL', 'Node.js', 'Express.js'],
-      github: 'https://github.com/LVSJanakiRamaraju/AgroFix',
-      demo: 'https://agro-fix-one.vercel.app/',
+      title: 'Student Result Portal ',
+      description: "Built a full-stack Student Result Analysis Portal using React.js, Node.js, and MongoDB to visualize academic data across8 semesters, including SGPA/CGPA trends, batch-wise pass percentages, and peer performance comparisons.",
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1753637074/Screenshot_2025-07-27_224336_o72mox.png',
+      tech: ['React', 'Tailwind CSS', 'MongoDB', 'Node.js', 'Express.js'],
+      github: 'https://github.com/LVSJanakiRamaraju/Student-Result-Analysis-Portal',
+      demo: 'https://student-result-analysis-portal.vercel.app/',
     },
     
     {
@@ -21,8 +21,8 @@ const projects = {
       demo: 'https://lvsjanakiramaraju.github.io/NewYear2025/',
     },
     {
-      title: 'To Do Application',
-      description: 'An interactive and responsive To-Do List Application built using HTML, CSS, and JavaScript. This app helps users efficiently manage their daily, weekly, and monthly tasks with an intuitive UI and local storage support.',
+      title: 'Task Manager',
+      description: 'An interactive and responsive Task Manager Application built using HTML, CSS, and JavaScript. This app helps users efficiently manage their daily, weekly, and monthly tasks with an intuitive UI and local storage support.',
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1742105372/Screenshot_2025-03-16_113633_acv5kl.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'Boxicons', 'SweetAlert'],
       github: 'https://github.com/LVSJanakiRamaraju/ToDo_Application',

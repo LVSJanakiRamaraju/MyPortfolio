@@ -12,9 +12,8 @@ const TechSphereBackground = () => {
   const techIcons = [
     "python", "javascript", "java", "cplusplus",
     "tailwindcss", "react", "nodejs", "express", "typescript",
-    "tensorflow", "scikitlearn",
     "mysql", "sqlite", "mongodb",
-    "git", "linux", "vscode", "figma", "jupyter"
+    "git", "vscode", "jupyter"
   ];
 
   const images = techIcons.map((icon) => ({
