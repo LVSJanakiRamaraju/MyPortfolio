@@ -2,12 +2,6 @@ import React from 'react';
 
 const experiences = [
   {
-    company: 'AlgoTutor',
-    role: 'DSA Trainer & Software Developer',
-    period: 'June 2024 - Present',
-    description: 'Conducted structured training sessions on Data Structures & Algorithms (DSA) for students and early-stage developers, focusing on problem-solving skills and coding efficiency.',
-  },
-  {
     company: 'EDUMOON',
     role: 'Front End Developer',
     period: 'April 2024 - June 2024',
