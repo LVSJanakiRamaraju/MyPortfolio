@@ -87,7 +87,7 @@ const Hero = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="https://leetcode.com/u/being_Limitless/"
+                href="https://leetcode.com/u/lvs_kanumuri_18/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transform hover:scale-110 transition-transform"
