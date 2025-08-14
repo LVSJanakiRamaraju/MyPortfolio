@@ -46,19 +46,6 @@ function App() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Tawk.to Live Chat Script
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://embed.tawk.to/67fe5efb08fe3f190bc23a3e/1iosq623j';
-    script.async = true;
-    script.charset = 'UTF-8';
-    script.setAttribute('crossorigin', '*');
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div className={`min-h-screen ${darkMode ? 'dark' : ''}`}>
