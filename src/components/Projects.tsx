@@ -40,6 +40,14 @@ const projects = {
   ],
   'Machine Learning': [
     {
+      title: 'Learning Path Generator',
+      description: 'A Streamlit-based application that creates personalized learning paths using the Model Context Protocol (MCP), helping learners follow adaptive, goal-driven study plans. The system integrates with YouTube, Google Drive, and Notion through APIs, unifying video-based learning, document storage, and note-taking in one platform. It features real-time progress tracking and an interactive UI, boosting engagement and learning efficiency by nearly 30%. Additionally, it leverages Google AI Studio API and Pipedream workflows to ensure secure and seamless multi-platform connectivity.',
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/t_correct/v1753112204/Screenshot_2025-07-21_210628_pengs4.png',
+      tech: ['Python', 'Streamlit', 'APIs'],
+      github: 'https://huggingface.co/spaces/RamaRaju18/Learning_Pat_Generator/tree/main',
+      demo: 'https://huggingface.co/spaces/RamaRaju18/Learning_Pat_Generator',
+    },
+    {
       title: 'Book Recommender System',
       description: 'A collaborative filtering-based web app that recommends similar books and showcases the top 50 popular ones. Built using Streamlit, it utilizes user ratings and cosine similarity to personalize recommendations.',
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1743958533/Screenshot_2025-04-06_222054_m4iemp.png',
