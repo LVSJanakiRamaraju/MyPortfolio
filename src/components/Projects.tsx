@@ -11,15 +11,15 @@ const projects = {
       github: 'https://github.com/LVSJanakiRamaraju/Student-Result-Analysis-Portal',
       demo: 'https://student-result-analysis-portal.vercel.app/',
     },
-    
     {
-      title: 'New Year 2025',
-      description: "This project is an animated New Year greeting featuring colorful text animations, balloons, and fireworks using HTML, CSS, and JavaScript.",
-      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1742122314/Screenshot_2025-03-16_161226_axex4m.png',
-      tech: ['HTML', 'CSS (Keyframe Animations, Transitions)', 'JavaScript'],
-      github: 'https://github.com/LVSJanakiRamaraju/NewYear2025',
-      demo: 'https://lvsjanakiramaraju.github.io/NewYear2025/',
+      title: 'Fruit & Vegetable Order Platform',
+      description: "It's a full-stack web application that enables users to place orders for vegetables and fruits, track order status, and allows admins to manage inventory and order data. Built using Next.js, PostgreSQL, and Tailwind CSS, with separate authentication for users and admins.",
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1746162082/Screenshot_2025-05-02_102504_mlqqnj.png',
+      tech: ['React', 'Tailwind CSS', 'PostgreSQL', 'Node.js', 'Express.js'],
+      github: 'https://github.com/LVSJanakiRamaraju/AgroFix',
+      demo: 'https://agro-fix-one.vercel.app/',
     },
+    
     {
       title: 'Task Manager',
       description: 'An interactive and responsive Task Manager Application built using HTML, CSS, and JavaScript. This app helps users efficiently manage their daily, weekly, and monthly tasks with an intuitive UI and local storage support.',
@@ -28,14 +28,22 @@ const projects = {
       github: 'https://github.com/LVSJanakiRamaraju/ToDo_Application',
       demo: 'https://lvsjanakiramaraju.github.io/ToDo_Application/',
     },
-    {
-      title: 'Wikipedia Search Application',
-      description: "This is a simple Wikipedia Search Application built using HTML, CSS (Bootstrap), and JavaScript. The application fetches search results from Wikipedia's API and displays them in a user-friendly format.",
-      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1742122291/Screenshot_2025-03-16_161146_ebn9ld.png',
-      tech: ['HTML', 'CSS (Bootstrap 4.5.2)', 'JavaScript'],
-      github: 'https://github.com/LVSJanakiRamaraju/Wikipedia_Search_Application',
-      demo: 'https://lvsjanakiramaraju.github.io/Wikipedia_Search_Application/',
+        {
+      title: 'New Year 2025',
+      description: "This project is an animated New Year greeting featuring colorful text animations, balloons, and fireworks using HTML, CSS, and JavaScript.",
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1742122314/Screenshot_2025-03-16_161226_axex4m.png',
+      tech: ['HTML', 'CSS (Keyframe Animations, Transitions)', 'JavaScript'],
+      github: 'https://github.com/LVSJanakiRamaraju/NewYear2025',
+      demo: 'https://lvsjanakiramaraju.github.io/NewYear2025/',
     },
+    // {
+    //   title: 'Wikipedia Search Application',
+    //   description: "This is a simple Wikipedia Search Application built using HTML, CSS (Bootstrap), and JavaScript. The application fetches search results from Wikipedia's API and displays them in a user-friendly format.",
+    //   image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1742122291/Screenshot_2025-03-16_161146_ebn9ld.png',
+    //   tech: ['HTML', 'CSS (Bootstrap 4.5.2)', 'JavaScript'],
+    //   github: 'https://github.com/LVSJanakiRamaraju/Wikipedia_Search_Application',
+    //   demo: 'https://lvsjanakiramaraju.github.io/Wikipedia_Search_Application/',
+    // },
     
   ],
   'Machine Learning': [
