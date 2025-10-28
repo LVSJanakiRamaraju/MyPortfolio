@@ -2,6 +2,12 @@ import React from 'react';
 
 const experiences = [
   {
+    company: 'Softomatic',
+    role: 'DSA Trainer',
+    period: 'August 2025 - September 2025',
+    description: 'Conducted comprehensive training sessions on Data Structures and Algorithms (DSA) for aspiring software developers, enhancing their problem-solving skills and coding proficiency.',
+  },
+  {
     company: 'EDUMOON',
     role: 'Front End Developer',
     period: 'April 2024 - June 2024',
