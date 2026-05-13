@@ -4,6 +4,14 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = {
   'Full Stack': [
     {
+      title: 'AI Resume Evaluator and Job Matcher',
+      description: "Built an AI-powered resume evaluation engine that matches resumes with job descriptions and delivers ATS-style improvement suggestions, increasing JD–resume alignment accuracy by 45%. Implemented automated NLP pipelines to clean, tag, and structure resume data, reducing manual screening effort by 60%. Developed an interactive dashboard for real-time resume feedback and job ranking to improve user engagement.",
+      image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/t_correct/v1778657552/Screenshot_2026-05-13_130045_sfswss.png',
+      tech: ['React.js', 'Node.js', 'Gemini API', 'PostgreSQL', 'TypeScript'],
+      github: 'https://github.com/LVSJanakiRamaraju/AI-Resume-Evaluator-and-Job-Matcher',
+      demo: 'https://ai-resume-evaluator-and-job-matcher-1.onrender.com/',
+    },
+    {
       title: 'Student Result Portal ',
       description: "Built a full-stack Student Result Analysis Portal using React.js, Node.js, and MongoDB to visualize academic data across8 semesters, including SGPA/CGPA trends, batch-wise pass percentages, and peer performance comparisons.",
       image: 'https://res.cloudinary.com/drlfc6gsb/image/upload/v1753637074/Screenshot_2025-07-27_224336_o72mox.png',
